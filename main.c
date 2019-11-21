@@ -129,7 +129,6 @@ void shortest_dijkstra(char **mapa, int n, int m, int tbf[2]) {
     int dist;
     int d[n][m];
     struct node* temp;
-    int temp_dist;
 
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < m; j++) {
@@ -169,7 +168,6 @@ void shortest_dijkstra(char **mapa, int n, int m, int tbf[2]) {
             return;
         }
 
-        //printf("%d %d %c\n", x, y, mapa[y][x]);
 
         if(x < m-1 && (mapa[y][x+1] == 'C' || mapa[y][x+1] == 'H' || mapa[y][x+1] == 'D' || mapa[y][x+1] == 'P')) {
             temp = find(heap, heap_size, x+1, y);
