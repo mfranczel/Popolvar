@@ -13,8 +13,18 @@ struct node {
     int x;
     int y;
     int dist;
+    int state;
     struct node *prev;
 };
+
+
+int is_gen_on(struct node* node) {
+    int state = node -> state;
+    if(state & 1 == 1) {
+        return 1;
+    }
+}
+
 
 void heap_insert(struct node **heap, int *heap_size, struct node *node){
     heap[*heap_size] = node;
@@ -121,13 +131,23 @@ void decrease_priority(struct node **heap, int heap_size, int x, int y, int new_
 
 }
 
+void next(char **mapa, int n, int m, int x, int y, int xx, int yy,struct node **heap, int heap_size, struct node* prev) {
+    struct node* temp;
+    if(mapa[y+yy][x+xx] == 'C' || mapa[y+yy][x+xx] == 'H' || mapa[y+yy][x+xx] == 'D' || mapa[y+yy][x+xx] == 'P') {
+            temp = find(heap, heap_size, x+xx, y+yy);
+            if(temp != NULL && prev -> dist != INT_MAX && temp -> dist > prev -> dist + get_cost(mapa, x, y)) {
+                temp ->prev = prev;
+                decrease_priority(heap, heap_size, x+xx, y+yy, prev -> dist + get_cost(mapa, x, y));
+            }
+       }
+}
+
 void shortest_dijkstra(char **mapa, int n, int m, int tbf[2]) {
     struct node **heap = (struct node**) malloc(n*m*sizeof(struct node*));
     int heap_size = 0;
     int x;
     int y;
     int dist;
-    int d[n][m];
     struct node* temp;
 
     for(int i = 0; i < n; i++) {
@@ -137,14 +157,13 @@ void shortest_dijkstra(char **mapa, int n, int m, int tbf[2]) {
             temp -> y = i;
             temp -> dist = INT_MAX;
             temp -> prev = NULL;
+            temp -> state = 0;
             if(i == 0 && j == 0) {
                 temp -> dist = 0;
             }
-            d[i][j] = INT_MAX;
             heap_insert(heap, &heap_size, temp);
         }
     }
-    d[0][0] = 0;
 
 
     while(heap_size != 0) {
@@ -154,13 +173,6 @@ void shortest_dijkstra(char **mapa, int n, int m, int tbf[2]) {
         dist = min -> dist;
 
         if(x == tbf[0] && y == tbf[1] && dist != INT_MAX) {
-            printf("KONEC\n");
-            for(int i = 0; i < n; i++) {
-                for(int j = 0; j < m; j++) {
-                    printf("%10d ", d[i][j]);
-                }
-                printf("\n");
-            }
             while(min != NULL) {
                 printf("%d %d %d\n", min -> x, min -> y, min -> dist);
                 min = min -> prev;
@@ -168,41 +180,23 @@ void shortest_dijkstra(char **mapa, int n, int m, int tbf[2]) {
             return;
         }
 
-
-        if(x < m-1 && (mapa[y][x+1] == 'C' || mapa[y][x+1] == 'H' || mapa[y][x+1] == 'D' || mapa[y][x+1] == 'P')) {
-            temp = find(heap, heap_size, x+1, y);
-            if(temp != NULL && d[y][x] != INT_MAX && temp -> dist > min -> dist + get_cost(mapa, x, y)) {
-                d[y][x+1] = min -> dist + get_cost(mapa, x, y);
-                temp ->prev = min;
-                decrease_priority(heap, heap_size, x+1, y, d[y][x+1]);
-            }
-
+        if(x < m-1) {
+            next(mapa, n, m, x, y, 1, 0, heap, heap_size, min);
         }
 
-        if(x > 0 && (mapa[y][x-1] == 'C' || mapa[y][x-1] == 'H' || mapa[y][x-1] == 'D' || mapa[y][x-1] == 'P')) {
-            temp = find(heap, heap_size, x-1, y);
-            if(temp != NULL && d[y][x] != INT_MAX && temp -> dist > min -> dist + get_cost(mapa, x, y)) {
-                d[y][x-1] = min -> dist + get_cost(mapa, x, y);
-                temp ->prev = min;
-                decrease_priority(heap, heap_size, x-1, y, d[y][x-1]);
-            }
+        if(x > 0) {
+            next(mapa, n, m, x, y, -1, 0, heap, heap_size, min);
         }
 
-        if(y < n-1 && (mapa[y+1][x] == 'C' || mapa[y+1][x] == 'H' || mapa[y+1][x] == 'D' || mapa[y+1][x] == 'P')) {
-            temp = find(heap, heap_size, x, y+1);
-            if(temp != NULL && d[y][x] != INT_MAX && temp -> dist > min -> dist + get_cost(mapa, x, y)) {
-                d[y+1][x] = min -> dist + get_cost(mapa, x, y);
-                temp ->prev = min;
-                decrease_priority(heap, heap_size, x, y+1, d[y+1][x]);
-            }
+        if(y < n-1) {
+            next(mapa, n, m, x, y, 0, 1, heap, heap_size, min);
         }
 
         if(y > 0 && (mapa[y-1][x] == 'C' || mapa[y-1][x] == 'H' || mapa[y-1][x] == 'D' || mapa[y-1][x] == 'P')) {
             temp = find(heap, heap_size, x, y-1);
-            if(temp != NULL && d[y][x] != INT_MAX && temp -> dist > min -> dist + get_cost(mapa, x, y)) {
-                d[y-1][x] = min -> dist + get_cost(mapa, x, y);
+            if(temp != NULL && min -> dist != INT_MAX && temp -> dist > min -> dist + get_cost(mapa, x, y)) {
                 temp ->prev = min;
-                decrease_priority(heap, heap_size, x, y-1, d[y-1][x]);
+                decrease_priority(heap, heap_size, x, y-1, min -> dist + get_cost(mapa, x, y));
             }
         }
 
