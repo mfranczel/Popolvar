@@ -167,6 +167,10 @@ struct teleport *find_teleport(char n) {
             return t6;
         case '7':
             return t7;
+        case '8':
+            return t8;
+        case '9':
+            return t9;
     }
 
 }
