@@ -1,1 +1,1 @@
-/usr/bin/gcc -g   CMakeFiles/Popolvar.dir/main.c.o  -o Popolvar 
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Popolvar.dir/main.c.o  -o Popolvar.exe -Wl,--out-implib,libPopolvar.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

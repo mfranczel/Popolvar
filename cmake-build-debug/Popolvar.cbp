@@ -8,78 +8,76 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/michal/CLionProjects/Popolvar/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/michal/CLionProjects/Popolvar/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Popolvar">
-				<Option output="/home/michal/CLionProjects/Popolvar/cmake-build-debug/Popolvar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/michal/CLionProjects/Popolvar/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Popolvar.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 Popolvar"/>
-					<CompileFile command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 Popolvar"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Popolvar/fast">
-				<Option output="/home/michal/CLionProjects/Popolvar/cmake-build-debug/Popolvar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/michal/CLionProjects/Popolvar/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Popolvar.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 Popolvar/fast"/>
-					<CompileFile command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 Popolvar/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/michal/CLionProjects/Popolvar/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="make -j4 -f &quot;/home/michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Michal/CLionProjects/Popolvar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/michal/CLionProjects/Popolvar/main.c">
+		<Unit filename="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/main.c">
 			<Option target="Popolvar"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/Popolvar/CMakeLists.txt">
+		<Unit filename="/cygdrive/c/Users/Michal/CLionProjects/Popolvar/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

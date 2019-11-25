@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Popolvar.dir/main.c.o"
-  "Popolvar"
+  "Popolvar.exe"
   "Popolvar.pdb"
+  "libPopolvar.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
